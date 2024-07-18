@@ -1,0 +1,100 @@
+#clock {
+    position: fixed;
+    width: 75vh;
+    height: 75vh;
+    top: calc(50vh - 37.5vh - 1vh);
+    left: calc(50vw - 37.5vh - 1vh);
+    border-radius: 100vh;
+    border: 1vh solid #000;
+}
+
+#hour,
+#minute,
+#second {
+    position: fixed;
+    width: 1vh;
+    height: 35vh;
+    left: calc(50vw - 0.5vh);
+    top: calc(50vh - 34.5vh);
+    border-radius: 1vh;
+    background-color: #000;
+    transform-origin: 0.5vh 34.5vh;
+}
+
+#hour {
+    height: 15vh;
+    top: calc(50vh - 14.5vh);
+    transform-origin: 0.5vh 14.5vh;
+}
+
+#second {
+    background-color: #f00;
+}
+
+#text {
+    position: fixed;
+    width: 18vh;
+    top: calc(50vh + 25vh);
+    left: calc(50vw - 9vh);
+    text-align: center;
+    font-size: 5vh;
+    backdrop-filter: blur(10px);
+}
+
+@media screen and (orientation: portrait) {
+    #clock {
+        width: 75vw;
+        height: 75vw;
+        top: calc(50vh - 37.5vw - 1vw);
+        left: calc(50vw - 37.5vw - 1vw);
+        border-radius: 100vw;
+        border-width: 1vw;
+    }
+
+    #hour,
+    #minute,
+    #second {
+        width: 1vw;
+        height: 35vw;
+        left: calc(50vw - 0.5vw);
+        top: calc(50vh - 34.5vw);
+        border-radius: 1vw;
+        transform-origin: 0.5vw 34.5vw;
+    }
+
+    #hour {
+        height: 15vw;
+        top: calc(50vh - 14.5vw);
+        transform-origin: 0.5vw 14.5vw;
+    }
+
+    #text {
+        width: 18vw;
+        top: calc(50vh + 25vw);
+        left: calc(50vw - 9vw);
+        font-size: 5vw;
+    }
+}
+
+@media (prefers-color-scheme: dark) {
+    html,
+    body {
+        background: black;
+        color: white;
+    }
+
+    #clock {
+        border-color: white;
+    }
+
+    #hour,
+    #minute {
+        background-color: white;
+    }
+}
+
+.foot {
+    position: fixed;
+    bottom: 0;
+    color: grey;
+}
